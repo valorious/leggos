@@ -181,7 +181,7 @@ export class ItemDisplay extends React.Component {
                 if (mat.children.length > 0 && mat.open) {
                     mat.children.forEach((child) => {
                         let newChild = {id: child.id};
-                        newChild.amt = child.amount * mat.amount;
+                        newChild.amt = this.convertAmount(child.amount, mat.amount, mat.id);
                         newMats = this.checkThenAdd(newMats, newChild);
                     });
 
@@ -207,6 +207,9 @@ export class ItemDisplay extends React.Component {
         return newList;
     }
 
+    convertAmount = (amount, parent_amount, parent_id) => {
+        return Math.ceil((amount  * parent_amount)/(divideBy(parent_id)));
+    }
 
     render() {
 
