@@ -31,6 +31,7 @@ export class ItemDisplay extends React.Component {
     newTotals = [];
 
     currRank = 1;
+    vestigeProf = 3;
 
     componentDidMount() {
         this.getAllComponentMaterials(this.props.id);
@@ -68,12 +69,16 @@ export class ItemDisplay extends React.Component {
         if (prevProps.id !== this.props.id) {
             if (this.props.slot === 'Neck' || this.props.slot === 'Ring') {
                 this.setState({vestigeProfession: 4});
+                this.vestigeProf = 4;
             } else if (this.props.slot === 'Back' || this.props.armor === 'Cloth') {
                 this.setState({vestigeProfession: 3});
+                this.vestigeProf = 3;
             }  else if (this.props.armor === 'Plate') {
                 this.setState({vestigeProfession: 1});
+                this.vestigeProf = 1;
             } else {
                 this.setState({vestigeProfession: 2});
+                this.vestigeProf = 2;
             }
             this.getAllComponentMaterials(this.props.id);
         }
@@ -110,7 +115,7 @@ export class ItemDisplay extends React.Component {
             });
         }
         if (this.state.needsOrigins) {
-            let vestigeComps = this.getComps(185960, this.state.vestigeProfession);
+            let vestigeComps = this.getComps(185960, this.vestigeProf);
             console.log(vestigeComps);
             for (let i=0; i<vestigeComps.length; i++) {
                 children = [];
@@ -136,7 +141,7 @@ export class ItemDisplay extends React.Component {
             }
             console.log(rows);
         } else if (this.state.needsEternal) {
-            let vestigeComps = this.getComps(187784, this.state.vestigeProfession);
+            let vestigeComps = this.getComps(187784, this.vestigeProf);
             for (let i=0; i<vestigeComps.length; i++) {
                 children = [];
                 let alreadyInRows = rows.findIndex(element => element.id === vestigeComps[i].id_material);
