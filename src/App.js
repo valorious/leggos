@@ -18,7 +18,7 @@ function App() {
             <script src="https://wow.zamimg.com/widgets/power.js"></script>
         </Helmet>
       <div className="app-header">
-          <p>Legendary Craft Helper</p>
+          <h2>Legendary Craft Helper</h2>
       </div>
         <Main />
     </div>

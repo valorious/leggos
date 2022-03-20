@@ -20,29 +20,29 @@ export class Selection extends React.Component {
         const menuArmorClass = `dropdown-menu${this.state.isOpenArmor ? " show" : ""}`;
         const selectedArmor = '${this.state.currentArmor ? " active" : ""}';
         return (
-            <div>
+            <div id="selection">
                 <div>I am a <ToggleButtonGroup type="radio" name="options" defaultValue={'Cloth'} onChange={this.toggleCurrentArmor}>
-                        <ToggleButton id="tbg-radio-1" value={'Cloth'}>
+                        <ToggleButton id="tbg-radio-1"variant="secondary"  value={'Cloth'}>
                             Cloth
                         </ToggleButton>
-                        <ToggleButton id="tbg-radio-2" value={'Leather'}>
+                        <ToggleButton id="tbg-radio-2"variant="secondary"  value={'Leather'}>
                             Leather
                         </ToggleButton>
-                        <ToggleButton id="tbg-radio-3" value={'Mail'}>
+                        <ToggleButton id="tbg-radio-3" variant="secondary"  value={'Mail'}>
                             Mail
                         </ToggleButton>
-                        <ToggleButton id="tbg-radio-4" value={'Plate'}>
+                        <ToggleButton id="tbg-radio-4" variant="secondary"  value={'Plate'}>
                             Plate
                         </ToggleButton>
                     </ToggleButtonGroup> wearer and I want to make a
                     Rank <ToggleButtonGroup type="radio" name="rank" defaultValue={1} onChange={this.toggleRank}>
-                        <ToggleButton id="rank-radio-1" value={1}>1</ToggleButton>
-                        <ToggleButton id="rank-radio-2" value={2}>2</ToggleButton>
-                        <ToggleButton id="rank-radio-3" value={3}>3</ToggleButton>
-                        <ToggleButton id="rank-radio-4" value={4}>4</ToggleButton>
-                        <ToggleButton id="rank-radio-5" value={5}>5</ToggleButton>
-                        <ToggleButton id="rank-radio-6" value={6}>6</ToggleButton>
-                        <ToggleButton id="rank-radio-7" value={7}>7</ToggleButton>
+                        <ToggleButton id="rank-radio-1"  variant="secondary" value={1}>1</ToggleButton>
+                        <ToggleButton id="rank-radio-2" variant="secondary" value={2}>2</ToggleButton>
+                        <ToggleButton id="rank-radio-3" variant="secondary" value={3}>3</ToggleButton>
+                        <ToggleButton id="rank-radio-4" variant="secondary" value={4}>4</ToggleButton>
+                        <ToggleButton id="rank-radio-5" variant="secondary" value={5}>5</ToggleButton>
+                        <ToggleButton id="rank-radio-6" variant="secondary" value={6}>6</ToggleButton>
+                        <ToggleButton id="rank-radio-7" variant="secondary" value={7}>7</ToggleButton>
                     </ToggleButtonGroup> legendary.</div></div>
         );
     }

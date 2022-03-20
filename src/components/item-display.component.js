@@ -199,7 +199,10 @@ export class ItemDisplay extends React.Component {
         if (index === -1) {
             newList.push(newItem);
         } else {
-            newList[index].amount += newItem.amount;
+            console.log("actually new amount needs to be added");
+            console.log([...newList]);
+            console.log("add " + newItem.amt + " to " + newList[index].amt);
+            newList[index].amt += newItem.amt;
         }
         return newList;
     }
@@ -208,7 +211,7 @@ export class ItemDisplay extends React.Component {
     render() {
 
         return (
-            <div>
+            <div id="item-display">
 
                 <div id="totals"><div><WowheadLink id={this.props.id} rank={this.props.rank}/> Components:</div>
                 <table><tbody>

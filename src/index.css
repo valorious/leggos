@@ -5,15 +5,30 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: darkgray;
 }
 
 .app-header {
   min-height: 10px;
 }
 
+.App {
+  width: 90%;
+  background-color: gainsboro;
+  margin: auto;
+  min-height: 500px;
+  border: 2px solid black;
+}
+
+#selection {
+  padding: 4px;
+}
+
 .content {
   width: 100%;
-  border: 2px solid black;
+  margin: auto;
+  background-color: gainsboro;
+  height: 800px;
 }
 
 code {
@@ -24,11 +39,12 @@ code {
 .left-side {
   width: 25%;
   max-width: 400px;
-  border: 2px solid black;
+  border-top: 2px solid black;
 }
 
 .right-side {
-  border: 2px solid black;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
 }
 
 
@@ -39,6 +55,7 @@ code {
 
 #armor-area td.armor-content {
   border: 2px solid black;
+  margin: 1px;
 }
 
 #armor-area table td.selected {
@@ -58,13 +75,16 @@ code {
   width: 100%;
 }
 
+
 #totals {
   height: 400px;
-  border: 2px solid black;
+  border: 2px solid slategrey;
   padding-left: 2px;
   text-align: left;
   font-weight: bold;
   padding-bottom: 4px;
+
+  background-color: whitesmoke;
 }
 
 
