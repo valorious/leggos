@@ -13,7 +13,7 @@ export class ArmorSlots extends React.Component {
     render () {
 
         return (
-            <div id='armor-area'>ARMOR! {this.props.currentArmorType} {this.state.currentSlot}
+            <div id='armor-area'>{this.props.currentArmorType} {this.state.currentSlot}
             <table><tbody>
             <tr><td className={'armor-content ' + (this.state.currentSlot === "Head" ? 'selected' : '')} ><img src={require('../images/'+ this.props.currentArmorType.toLowerCase() +  '_head.jpg')} onClick={() => this.toggleCurrentSlot("Head")} width="80px" height="80px"></img></td><td className='empty'></td>
                 <td className={'armor-content ' + (this.state.currentSlot === "Hands" ? 'selected' : '')} ><img src={require('../images/'+ this.props.currentArmorType.toLowerCase() +  '_hand.jpg')} onClick={() => this.toggleCurrentSlot("Hands")}  width="80px" height="80px"></img></td></tr>

@@ -35,11 +35,10 @@ export class Main extends React.Component {
 
                 <tbody>
                     <tr>
-                        <td className="left-side">Left Side
-                            Currently {this.state.currentSlot}
+                        <td className="left-side">
                             <ArmorSlots currentArmorType={this.state.currentArmor} changeSlot={this.handleSlotSelection} />
                         </td>
-                        <td className="right-side">Right Side
+                        <td className="right-side">
                         <ItemDisplay rank={this.state.currentRank} armor={this.state.currentArmor} slot={this.state.currentSlot} id={getIdOfLegendary(this.state.currentArmor, this.state.currentSlot)} />
                         </td>
 
